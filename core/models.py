@@ -11,7 +11,7 @@ class Piece(models.Model):
                     ('kt', 'knight'),
                     ('pn', 'pawn'),
                     )
-    COLOR_CHOICE = (('bk', 'black'), ('wt', 'white'))
+    COLOR_CHOICES = (('bk', 'black'), ('wt', 'white'))
 
     name = models.CharField(_("piece's name/type"),
                             max_length=50,
@@ -19,7 +19,7 @@ class Piece(models.Model):
 
     color = models.CharField(_("piece's color"),
                              max_length=50,
-                             choices=COLOR_CHOICE)
+                             choices=COLOR_CHOICES)
 
     class Meta:
         db_table = "piece"
