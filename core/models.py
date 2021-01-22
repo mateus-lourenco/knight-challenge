@@ -21,5 +21,9 @@ class Piece(models.Model):
                              max_length=50,
                              choices=COLOR_CHOICES)
 
+    def __str__(self) -> str:
+        return self.name
+
     class Meta:
         db_table = "piece"
+        
